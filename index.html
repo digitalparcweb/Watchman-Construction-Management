@@ -63,7 +63,8 @@ ul{list-style:none}
 .hero-headline{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:400;line-height:1.06;color:#fff;letter-spacing:-0.01em;margin-bottom:26px;white-space:nowrap;opacity:0;transform:translateY(30px);transition:opacity 0.9s 0.3s cubic-bezier(0.22,1,0.36,1),transform 0.9s 0.3s cubic-bezier(0.22,1,0.36,1)}
 .hero-headline em{font-style:normal;font-weight:500;color:var(--gold-light)}
 .hero-headline.in{opacity:1;transform:none}
-.hero-sub{font-size:1rem;line-height:1.72;color:#fff;max-width:500px;margin-bottom:44px;font-weight:300;opacity:0;transform:translateY(22px);transition:opacity 0.85s 0.55s cubic-bezier(0.22,1,0.36,1),transform 0.85s 0.55s cubic-bezier(0.22,1,0.36,1)}
+.hero-sub{font-size:1rem;line-height:1.72;color:#fff;max-width:640px;margin-bottom:44px;font-weight:300;opacity:0;transform:translateY(22px);transition:opacity 0.85s 0.55s cubic-bezier(0.22,1,0.36,1),transform 0.85s 0.55s cubic-bezier(0.22,1,0.36,1)}
+.hero-sub .line{display:block;white-space:nowrap}
 .hero-sub.in{opacity:1;transform:none}
 .hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;opacity:0;transform:translateY(18px);transition:opacity 0.8s 0.8s cubic-bezier(0.22,1,0.36,1),transform 0.8s 0.8s cubic-bezier(0.22,1,0.36,1)}
 .hero-actions.in{opacity:1;transform:none}
@@ -76,7 +77,7 @@ ul{list-style:none}
 
 /* HERO SWAP / TOGGLE */
 .hero-swap{position:relative}
-.hero-toggle{position:absolute;bottom:24px;right:24px;z-index:30;display:flex;background:rgba(10,9,7,0.55);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.15);border-radius:999px;padding:4px;gap:4px}
+.hero-toggle{position:absolute;top:104px;right:24px;z-index:30;display:flex;background:rgba(10,9,7,0.55);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.15);border-radius:999px;padding:4px;gap:4px}
 .hero-toggle-btn{border:none;background:transparent;color:rgba(255,255,255,0.65);font-family:'DM Sans',sans-serif;font-size:0.64rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:9px 16px;border-radius:999px;cursor:pointer;transition:background 0.25s,color 0.25s}
 .hero-toggle-btn.active{background:var(--gold);color:#fff}
 .hero-toggle-btn:not(.active):hover{color:#fff}
@@ -244,7 +245,7 @@ ul{list-style:none}
 /* CONTACT */
 .contact{background:var(--cream);padding:100px 48px}
 .contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.45fr;gap:80px}
-.contact-headline{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.7rem,2.4vw,2.5rem);font-weight:400;color:var(--ink);line-height:1.2;margin-bottom:18px}
+.contact-headline{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.7rem,2.4vw,2.5rem);font-weight:400;color:var(--ink);line-height:1.2;margin-bottom:18px;white-space:nowrap}
 .contact-headline em{font-style:normal;font-weight:500;color:var(--gold)}
 .contact-body{font-size:0.9rem;color:var(--muted);line-height:1.88;margin-bottom:40px}
 .contact-info{display:flex;flex-direction:column;gap:18px}
@@ -325,6 +326,8 @@ ul{list-style:none}
   .hamburger{display:flex}
   .hero-inner{padding:120px 20px 100px}
   .hero-headline{font-size:clamp(2rem,8vw,2.8rem);white-space:normal}
+  .hero-sub{font-size:0.92rem}
+  .hero-sub .line{white-space:normal}
   .hero-stats{position:static;grid-template-columns:repeat(2,1fr)}
   .intro-inner{grid-template-columns:1fr;gap:36px}
   .intro-right{grid-template-columns:1fr 1fr;grid-auto-rows:120px}
@@ -357,7 +360,7 @@ ul{list-style:none}
   .hero-b-headline{font-size:clamp(1.8rem,7vw,2.4rem)}
   .hero-b-actions{flex-direction:column;align-items:stretch}
   .hero-b-actions .btn-pill{justify-content:center}
-  .hero-toggle{bottom:16px;right:16px}
+  .hero-toggle{top:92px;right:16px}
 }
 @media(max-width:480px){
   .nav{padding:0 16px;height:68px}
@@ -365,6 +368,7 @@ ul{list-style:none}
   .hero-inner{padding:100px 16px 90px}
   .hero-headline{font-size:clamp(1.7rem,9vw,2.3rem);margin-bottom:18px}
   .hero-sub{font-size:0.88rem;margin-bottom:32px}
+  .hero-sub .line{white-space:normal}
   .hero-stats{grid-template-columns:1fr 1fr}
   .hero-stat{padding:16px 12px}
   .hero-stat-num{font-size:1.5rem}
@@ -393,7 +397,7 @@ ul{list-style:none}
   .test-content{padding:40px 18px}
   .test-quote{font-size:1.1rem}
   .cta-headline{font-size:1.5rem}
-  .contact-headline{font-size:1.5rem}
+  .contact-headline{font-size:1.3rem;white-space:normal}
   .contact-form-wrap{padding:20px 14px}
   .form-grid{gap:14px}
   .footer{padding:56px 18px 24px}
@@ -437,7 +441,7 @@ ul{list-style:none}
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <h1 class="hero-headline" id="heroHead">Your project. <em>Our watch.</em></h1>
-    <p class="hero-sub" id="heroSub">Transparent, professional construction management for homeowners and developers across the Twin Cities.<br>We handle the complexity, so you don't have to.</p>
+    <p class="hero-sub" id="heroSub"><span class="line">You hold your own funds and pay every trade directly, at cost, no markups.</span><span class="line">We manage the contractors, the budget, and the timeline, so you don't have to.</span></p>
     <div class="hero-actions" id="heroActions">
       <a href="#contact" class="btn-pill">
         Start Your Project
@@ -458,17 +462,13 @@ ul{list-style:none}
   <div class="hero-b-left">
     <div class="hero-b-eyebrow">TWIN CITIES, MN &nbsp;&middot;&nbsp; 12+ YEARS OF RESULTS</div>
     <h1 class="hero-b-headline">Construction Management<br>That Protects <em>Your Investment</em></h1>
-    <p class="hero-b-sub">Transparent, professional oversight for homeowners and developers across the Twin Cities. We manage the contractors, the budget, and the timeline, so you don't have to.</p>
+    <p class="hero-b-sub">You keep control of your money and pay trades directly, at cost. We manage the contractors, the budget, and the timeline, so you don't have to.</p>
     <div class="hero-b-actions">
       <a href="#contact" class="btn-pill">
         Get a Free Consultation
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg>
       </a>
       <a href="#portfolio" class="btn-ghost">View Our Work</a>
-    </div>
-    <div class="hero-b-credential">
-      <div class="hero-b-credential-badge">MN</div>
-      <div class="hero-b-credential-text">Licensed Minnesota General Contractor<br>License #BC123456</div>
     </div>
     <div class="hero-b-stats">
       <div class="hero-b-stat"><div class="hero-b-stat-num">150<span>+</span></div><div class="hero-b-stat-label">Projects Completed</div></div>
@@ -523,8 +523,8 @@ ul{list-style:none}
   <div class="intro-inner">
     <div class="intro-left">
       <h2 class="intro-headline" data-reveal><span class="line">A smarter way to remodel,</span><span class="line"><em>without the headache.</em></span></h2>
-      <p class="intro-body" data-reveal data-reveal-delay="1">Watchman brings professional oversight and 100% transparency to every remodel: your needs come first, not a contractor's bank account or overhead. We act as your dedicated representative, managing contractors, timelines, and budgets so you always know exactly where things stand.</p>
-      <p class="intro-body" data-reveal data-reveal-delay="2">Whether you're renovating a kitchen, adding on, or doing a full-home remodel, we make sure the job gets done right, on time, and on budget.</p>
+      <p class="intro-body" data-reveal data-reveal-delay="1">Under the traditional contractor model, you hand over a deposit and hope your money is managed well. With Watchman, you never do: you hold your own funds and pay every trade and material invoice directly, at cost. Our only fee is for managing the process, start to finish, so there's never a reason to hide a number from you.</p>
+      <p class="intro-body" data-reveal data-reveal-delay="2">Whether you're renovating a kitchen, adding on, or doing a full-home remodel, we vet the trades, run the site, and keep the job on schedule and on budget, with you informed every step of the way.</p>
       <div style="margin-top:32px;" data-reveal data-reveal-delay="3">
         <a href="#contact" class="btn-pill dark">Talk to Us <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></a>
       </div>
@@ -632,23 +632,23 @@ ul{list-style:none}
   </div>
   <div class="about-content">
     <h2 class="about-headline" data-reveal>We work for you, <em>not the contractor.</em></h2>
-    <p class="about-body" data-reveal data-reveal-delay="1">Most homeowners go into a remodel blind, relying on contractors who have competing interests. Watchman sits on your side of the table, protecting your investment and keeping everyone accountable from day one.</p>
+    <p class="about-body" data-reveal data-reveal-delay="1">Most homeowners go into a remodel blind, handing over a deposit to a contractor with competing interests. Watchman sits on your side of the table: you meet every trade before you hire them, you hold your own money, and everyone stays accountable from day one.</p>
     <div class="about-list">
       <div class="about-item" data-reveal data-reveal-delay="1">
         <svg class="about-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9,12 11,14 15,10"/></svg>
-        <div><span class="about-item-strong">100% Transparent Pricing</span><span class="about-item-text">Open-book contracts: you see every invoice, every line item, every markup.</span></div>
+        <div><span class="about-item-strong">Meet Every Trade First</span><span class="about-item-text">We bring vetted trades to a bid walk so you meet them face to face and choose who works in your home.</span></div>
       </div>
       <div class="about-item" data-reveal data-reveal-delay="2">
         <svg class="about-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9,12 11,14 15,10"/></svg>
-        <div><span class="about-item-strong">Dedicated Project Manager</span><span class="about-item-text">One point of contact who knows your project inside and out: no call centers, no handoffs.</span></div>
+        <div><span class="about-item-strong">You Hold the Funds</span><span class="about-item-text">You pay trades and materials directly, at cost. Our only fee is for managing the project.</span></div>
       </div>
       <div class="about-item" data-reveal data-reveal-delay="3">
         <svg class="about-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9,12 11,14 15,10"/></svg>
-        <div><span class="about-item-strong">Weekly Progress Reports</span><span class="about-item-text">Clear weekly updates: what's done, what's next, where the budget stands.</span></div>
+        <div><span class="about-item-strong">Dedicated Project Manager</span><span class="about-item-text">One point of contact who knows your project inside and out: no call centers, no handoffs.</span></div>
       </div>
       <div class="about-item" data-reveal data-reveal-delay="4">
         <svg class="about-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9,12 11,14 15,10"/></svg>
-        <div><span class="about-item-strong">Pre-Vetted Contractor Network</span><span class="about-item-text">We only work with licensed, insured trades we've built a proven track record with.</span></div>
+        <div><span class="about-item-strong">Weekly Progress Reports</span><span class="about-item-text">Clear weekly updates: what's done, what's next, where the budget stands.</span></div>
       </div>
     </div>
     <a href="#contact" class="btn-pill" data-reveal>Meet the Team <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></a>
@@ -685,7 +685,7 @@ ul{list-style:none}
       <div class="process-card-body">
         <div class="process-step">02</div>
         <h3 class="process-title">Plan & Budget</h3>
-        <p class="process-text">We build a detailed project scope, timeline, and open-book budget before a single contractor is hired. You approve everything before we proceed.</p>
+        <p class="process-text">We bring in trades for a bid walk so you meet them and see real proposals side by side, at cost with no markups. You choose who's hired before we proceed.</p>
       </div>
     </div>
     <div class="process-card" data-reveal data-reveal-delay="2">
@@ -693,7 +693,7 @@ ul{list-style:none}
       <div class="process-card-body">
         <div class="process-step">03</div>
         <h3 class="process-title">Build & Manage</h3>
-        <p class="process-text">We run daily site oversight, coordinate all trades, handle permits, and send you weekly updates, so you're always informed without being overwhelmed.</p>
+        <p class="process-text">Before work starts, we get every trade on a call to walk through the timeline together. Then we run daily site oversight and send you weekly updates, so you're always informed without being overwhelmed.</p>
       </div>
     </div>
     <div class="process-card" data-reveal data-reveal-delay="3">
@@ -856,7 +856,6 @@ ul{list-style:none}
         <div class="footer-hours-row"><span class="footer-hours-day">Mon – Fri</span><span>7am – 6pm</span></div>
         <div class="footer-hours-row"><span class="footer-hours-day">Saturday</span><span>8am – 2pm</span></div>
         <div class="footer-hours-row"><span class="footer-hours-day">Sunday</span><span>Closed</span></div>
-        <div style="margin-top:24px;"><div class="footer-col-title">License</div><div style="font-size:0.8rem;color:#fff;">MN General Contractor<br>License #BC123456</div></div>
       </div>
     </div>
     <div class="footer-bottom">
