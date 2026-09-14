@@ -15,7 +15,7 @@ img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
 :root{
-  --ink:#1A1916;--ink-soft:#3C3B37;--gold:#B8882B;--gold-light:#D4A040;
+  --ink:#1A1916;--ink-soft:#3C3B37;--gold:#E8960C;--gold-light:#FFB627;
   --cream:#F9F6F1;--cream-mid:#F0EBE3;--cream-border:#E2DBD0;
   --dark:#111210;--muted:#7A7770;--white:#FFFFFF;
 }
@@ -36,15 +36,15 @@ ul{list-style:none}
 .nav-links a{font-size:0.75rem;font-weight:500;letter-spacing:0.06em;color:var(--ink-soft);transition:color 0.2s;text-transform:uppercase}
 .nav-links a:hover{color:var(--gold)}
 
-/* BUTTONS — no dark icon panel */
-.btn-pill{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#fff;border:none;cursor:pointer;border-radius:999px;padding:12px 26px;font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background 0.25s,transform 0.2s,box-shadow 0.25s}
-.btn-pill:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(184,136,43,0.3)}
-.btn-pill svg{width:13px;height:13px;flex-shrink:0;transition:transform 0.25s}
+/* BUTTONS - no dark icon panel */
+.btn-pill{display:inline-flex;align-items:center;line-height:1;gap:10px;background:var(--gold);color:#fff;border:none;cursor:pointer;border-radius:999px;padding:12px 26px;font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background 0.25s,transform 0.2s,box-shadow 0.25s}
+.btn-pill:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,150,12,0.35)}
+.btn-pill svg{width:13px;height:13px;flex-shrink:0;display:block;transition:transform 0.25s}
 .btn-pill:hover svg{transform:translateX(3px)}
 .btn-pill.dark{background:var(--ink)}
 .btn-pill.dark:hover{background:#2a2926}
 
-.btn-ghost{display:inline-flex;align-items:center;gap:10px;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.3);border-radius:999px;padding:12px 26px;transition:background 0.25s,color 0.25s,transform 0.2s}
+.btn-ghost{display:inline-flex;align-items:center;line-height:1;gap:10px;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.3);border-radius:999px;padding:12px 26px;transition:background 0.25s,color 0.25s,transform 0.2s}
 .btn-ghost:hover{background:rgba(255,255,255,0.1);color:#fff;transform:translateY(-2px)}
 
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
@@ -56,7 +56,9 @@ ul{list-style:none}
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 70%;z-index:0}
-.hero-overlay{position:absolute;inset:0;background:rgba(10,9,7,0.62);z-index:1}
+.hero-overlay{position:absolute;inset:0;z-index:1;background:
+  linear-gradient(100deg,rgba(10,9,7,0.72) 0%,rgba(10,9,7,0.5) 35%,rgba(10,9,7,0.18) 62%,rgba(10,9,7,0.1) 100%),
+  linear-gradient(0deg,rgba(8,7,6,0.85) 0%,rgba(8,7,6,0.35) 26%,rgba(8,7,6,0.08) 50%,rgba(8,7,6,0.22) 100%)}
 .hero-inner{position:relative;z-index:2;max-width:900px;padding:160px 48px 140px}
 .hero-headline{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.8rem,5.5vw,5rem);font-weight:400;line-height:1.06;color:#fff;letter-spacing:-0.01em;margin-bottom:26px;white-space:nowrap;opacity:0;transform:translateY(30px);transition:opacity 0.9s 0.3s cubic-bezier(0.22,1,0.36,1),transform 0.9s 0.3s cubic-bezier(0.22,1,0.36,1)}
 .hero-headline em{font-style:normal;font-weight:500;color:var(--gold-light)}
@@ -102,7 +104,8 @@ ul{list-style:none}
 .section-head-left{}
 .section-headline{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.9rem,2.8vw,2.8rem);font-weight:400;line-height:1.15;color:var(--ink)}
 .section-headline em{font-style:normal;font-weight:500;color:var(--gold)}
-.section-link{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0;transition:gap 0.2s}
+.section-link{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;line-height:1;gap:8px;white-space:nowrap;flex-shrink:0;transition:gap 0.2s}
+.section-link svg{display:block;flex-shrink:0}
 .section-link:hover{gap:12px}
 .svc-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
 .svc-card{background:var(--white);overflow:hidden;position:relative;transition:transform 0.4s cubic-bezier(0.22,1,0.36,1),box-shadow 0.4s}
@@ -148,15 +151,15 @@ ul{list-style:none}
 .process-header{max-width:1200px;margin:0 auto 60px}
 .process-headline{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2rem,3vw,3rem);font-weight:400;color:#fff;line-height:1.15}
 .process-headline em{font-style:normal;font-weight:500;color:var(--gold-light)}
-.process-sub{font-size:0.88rem;color:rgba(255,255,255,0.42);margin-top:12px;max-width:460px}
+.process-sub{font-size:0.88rem;color:rgba(255,255,255,0.42);margin-top:12px;max-width:none;white-space:nowrap}
 .process-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
 .process-card{background:rgba(255,255,255,0.04);overflow:hidden;transition:background 0.35s}
 .process-card:hover{background:rgba(255,255,255,0.07)}
-.process-card-img{width:100%;height:190px;object-fit:cover;opacity:0.6;display:block;transition:opacity 0.4s,transform 0.6s cubic-bezier(0.22,1,0.36,1)}
-.process-card:hover .process-card-img{opacity:0.82;transform:scale(1.04)}
+.process-card-img{width:100%;height:190px;object-fit:cover;opacity:0.8;display:block;transition:opacity 0.4s,transform 0.6s cubic-bezier(0.22,1,0.36,1)}
+.process-card:hover .process-card-img{opacity:0.92;transform:scale(1.04)}
 .process-card-body{padding:26px 22px 30px}
-.process-step{font-family:'Bricolage Grotesque',sans-serif;font-size:2.8rem;font-weight:300;color:var(--gold);opacity:0.4;line-height:1;margin-bottom:10px;transition:opacity 0.3s}
-.process-card:hover .process-step{opacity:0.7}
+.process-step{font-family:'Bricolage Grotesque',sans-serif;font-size:2.8rem;font-weight:300;color:var(--gold);opacity:0.7;line-height:1;margin-bottom:10px;transition:opacity 0.3s}
+.process-card:hover .process-step{opacity:0.85}
 .process-title{font-family:'Bricolage Grotesque',sans-serif;font-size:1.2rem;font-weight:500;color:#fff;margin-bottom:9px}
 .process-text{font-size:0.81rem;color:rgba(255,255,255,0.47);line-height:1.78}
 
@@ -165,7 +168,7 @@ ul{list-style:none}
 .portfolio-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .portfolio-item{position:relative;overflow:hidden;cursor:pointer}
 .portfolio-item:first-child{grid-column:1/3}
-.p-img{width:100%;height:300px;object-fit:cover;display:block;transition:transform 0.7s cubic-bezier(0.22,1,0.36,1)}
+.p-img{width:100%;height:300px;object-fit:cover;object-position:center 40%;display:block;transition:transform 0.7s cubic-bezier(0.22,1,0.36,1)}
 .portfolio-item:first-child .p-img{height:420px}
 .portfolio-item:hover .p-img{transform:scale(1.06)}
 .p-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,9,7,0.72) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:26px}
@@ -176,8 +179,8 @@ ul{list-style:none}
 /* MARQUEE */
 .marquee-strip{background:var(--cream);border-top:1px solid var(--cream-border);border-bottom:1px solid var(--cream-border);overflow:hidden}
 .marquee-inner{display:flex;animation:marquee-anim 30s linear infinite}
-.marquee-text{flex-shrink:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.6rem,4.8vw,4rem);font-weight:300;color:var(--ink);opacity:0.09;padding-block:22px;padding-inline:48px;white-space:nowrap}
-.marquee-text em{font-style:normal;font-weight:500}
+.marquee-text{flex-shrink:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.6rem,4.8vw,4rem);font-weight:400;color:var(--ink);opacity:0.62;padding-block:22px;padding-inline:48px;white-space:nowrap}
+.marquee-text em{font-style:normal;font-weight:600;color:var(--gold);opacity:1}
 @keyframes marquee-anim{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* TESTIMONIAL */
@@ -189,7 +192,7 @@ ul{list-style:none}
 .test-mark{font-family:'Bricolage Grotesque',sans-serif;font-size:5.5rem;line-height:0.7;color:var(--gold);opacity:0.22;margin-bottom:22px}
 .test-quote{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.2rem,1.9vw,1.7rem);font-weight:400;line-height:1.55;color:var(--ink);margin-bottom:32px;font-style:normal}
 .test-author{display:flex;align-items:center;gap:14px}
-.test-avatar{width:48px;height:48px;border-radius:50%;object-fit:cover}
+.test-avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:1rem;flex-shrink:0}
 .test-name{font-weight:600;font-size:0.87rem;color:var(--ink)}
 .test-role{font-size:0.76rem;color:var(--muted)}
 .test-stars{color:var(--gold);font-size:0.78rem;letter-spacing:2px;margin-bottom:2px}
@@ -223,9 +226,9 @@ ul{list-style:none}
 .form-input,.form-select,.form-textarea{width:100%;padding:11px 13px;border:1px solid var(--cream-border);background:var(--cream);font-family:'DM Sans',sans-serif;font-size:0.87rem;color:var(--ink);outline:none;transition:border-color 0.25s;-webkit-appearance:none}
 .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gold)}
 .form-textarea{resize:vertical;min-height:110px}
-.form-submit{width:100%;margin-top:6px;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:#fff;border:none;cursor:pointer;border-radius:999px;padding:14px 28px;font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background 0.25s,transform 0.2s,box-shadow 0.25s}
-.form-submit:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(184,136,43,0.28)}
-.form-submit svg{width:13px;height:13px;transition:transform 0.25s}
+.form-submit{width:100%;margin-top:6px;display:inline-flex;align-items:center;justify-content:center;line-height:1;gap:10px;background:var(--gold);color:#fff;border:none;cursor:pointer;border-radius:999px;padding:14px 28px;font-family:'DM Sans',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;transition:background 0.25s,transform 0.2s,box-shadow 0.25s}
+.form-submit:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,150,12,0.32)}
+.form-submit svg{width:13px;height:13px;display:block;transition:transform 0.25s}
 .form-submit:hover svg{transform:translateX(3px)}
 
 /* FOOTER */
@@ -252,6 +255,10 @@ ul{list-style:none}
 .footer-links a:hover{color:rgba(255,255,255,0.65)}
 
 /* RESPONSIVE */
+@media(max-width:1200px){
+  .intro-inner{gap:56px}
+  .contact-inner{gap:56px}
+}
 @media(max-width:1024px){
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .process-grid{grid-template-columns:repeat(2,1fr)}
@@ -260,6 +267,21 @@ ul{list-style:none}
   .footer-top{grid-template-columns:1fr 1fr;gap:36px}
   .stats-inner{grid-template-columns:repeat(2,1fr)}
   .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .nav{padding:0 28px}
+  .nav-links{gap:22px}
+  .nav-links a{font-size:0.7rem}
+  .hero-headline{white-space:normal}
+  .about-content{padding:64px 40px}
+  .intro-inner{grid-template-columns:1fr;gap:48px}
+  .intro-right{max-width:560px}
+  .testimonial{grid-template-columns:1fr}
+  .test-photo{height:340px}
+  .test-content{padding:64px 40px}
+}
+@media(max-width:900px){
+  .nav-links{gap:16px}
+  .nav-links a{font-size:0.66rem}
+  .btn-pill.nav-pill{padding:11px 20px;font-size:0.66rem}
 }
 @media(max-width:768px){
   .nav{padding:0 20px}
@@ -290,6 +312,48 @@ ul{list-style:none}
   .services,.intro,.portfolio,.contact,.process,.footer{padding-left:20px;padding-right:20px}
   .section-header{flex-direction:column;align-items:flex-start;gap:12px}
   .cta-band{padding:56px 20px}
+  .cta-band-inner{flex-direction:column;align-items:flex-start;gap:24px}
+  .hero-actions{gap:12px}
+  .hero-actions .btn-pill,.hero-actions .btn-ghost{width:100%;justify-content:center}
+}
+@media(max-width:480px){
+  .nav{padding:0 16px;height:68px}
+  .nav-logo{font-size:1.1rem}
+  .hero-inner{padding:100px 16px 90px}
+  .hero-headline{font-size:clamp(1.7rem,9vw,2.3rem);margin-bottom:18px}
+  .hero-sub{font-size:0.88rem;margin-bottom:32px}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .hero-stat{padding:16px 12px}
+  .hero-stat-num{font-size:1.5rem}
+  .hero-stat-label{font-size:0.55rem}
+  .ticker-item{padding:0 20px;font-size:0.6rem}
+  .intro,.services,.portfolio,.contact,.process{padding-top:64px;padding-bottom:64px}
+  .intro-headline,.section-headline{font-size:1.6rem}
+  .intro-right{grid-template-columns:1fr 1fr;grid-auto-rows:96px}
+  .intro-badge{padding:12px 14px}
+  .intro-badge-num{font-size:1.7rem}
+  .svc-body{padding:20px 18px 24px}
+  .about-headline{font-size:1.5rem}
+  .about-content{padding:44px 18px}
+  .about-list{gap:16px}
+  .stats-inner{grid-template-columns:1fr}
+  .stat-num{font-size:2.6rem}
+  .process{padding:64px 18px}
+  .process-headline{font-size:1.6rem}
+  .process-sub{white-space:normal;font-size:0.82rem}
+  .process-card-body{padding:20px 16px 24px}
+  .process-step{font-size:2.2rem}
+  .portfolio-item:first-child .p-img{height:280px}
+  .p-img{height:220px}
+  .marquee-text{font-size:1.8rem;padding-inline:24px}
+  .test-content{padding:40px 18px}
+  .test-quote{font-size:1.1rem}
+  .cta-headline{font-size:1.5rem}
+  .contact-headline{font-size:1.5rem}
+  .contact-form-wrap{padding:20px 14px}
+  .form-grid{gap:14px}
+  .footer{padding:56px 18px 24px}
+  .footer-bottom{flex-direction:column;align-items:flex-start;gap:12px}
 }
 </style>
 </head>
@@ -341,7 +405,7 @@ ul{list-style:none}
     <div class="hero-stat"><div class="hero-stat-num">150+</div><div class="hero-stat-label">Projects Completed</div></div>
     <div class="hero-stat"><div class="hero-stat-num">12+</div><div class="hero-stat-label">Years Experience</div></div>
     <div class="hero-stat"><div class="hero-stat-num">98%</div><div class="hero-stat-label">Client Satisfaction</div></div>
-    <div class="hero-stat"><div class="hero-stat-num">$0</div><div class="hero-stat-label">Hidden Fees</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">20-40%</div><div class="hero-stat-label">Avg. Client Savings</div></div>
   </div>
 </section>
 
@@ -369,17 +433,17 @@ ul{list-style:none}
 <section class="intro" id="about">
   <div class="intro-inner">
     <div class="intro-left">
-      <h2 class="intro-headline" data-reveal>A smarter way to remodel, <em>without the headache.</em></h2>
-      <p class="intro-body" data-reveal data-reveal-delay="1">Watchman brings professional oversight and transparency to every remodel. We act as your dedicated representative — managing contractors, timelines, and budgets so you always know exactly where things stand.</p>
+      <h2 class="intro-headline" data-reveal>A smarter way to remodel,<br><em>without the headache.</em></h2>
+      <p class="intro-body" data-reveal data-reveal-delay="1">Watchman brings professional oversight and 100% transparency to every remodel: your needs come first, not a contractor's bank account or overhead. We act as your dedicated representative, managing contractors, timelines, and budgets so you always know exactly where things stand.</p>
       <p class="intro-body" data-reveal data-reveal-delay="2">Whether you're renovating a kitchen, adding on, or doing a full-home remodel, we make sure the job gets done right, on time, and on budget.</p>
       <div style="margin-top:32px;" data-reveal data-reveal-delay="3">
         <a href="#contact" class="btn-pill dark">Talk to Us <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="2" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg></a>
       </div>
     </div>
     <div class="intro-right" data-reveal data-reveal-delay="2">
-      <img class="intro-img-main" src="https://images.pexels.com/photos/2121121/pexels-photo-2121121.jpeg?auto=compress&cs=tinysrgb&w=800&h=900&dpr=1" alt="Beautiful remodeled entryway" loading="lazy">
-      <img class="intro-img-sm sm-1" src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Home addition renovation" loading="lazy">
-      <img class="intro-img-sm sm-2" src="https://images.pexels.com/photos/1454805/pexels-photo-1454805.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&dpr=1" alt="Bathroom renovation detail" loading="lazy">
+      <img class="intro-img-main" src="actual-photos/project-photos/kitchen-remodel-lanterns.jpeg" alt="Beautiful remodeled entryway" loading="lazy">
+      <img class="intro-img-sm sm-1" src="actual-photos/project-photos/exterior-addition-finished.png" alt="Home addition renovation" loading="lazy">
+      <img class="intro-img-sm sm-2" src="actual-photos/project-photos/living-room-fireplace.png" alt="Bathroom renovation detail" loading="lazy">
       <div class="intro-badge">
         <div class="intro-badge-num">150+</div>
         <div class="intro-badge-text">Homes Remodeled</div>
@@ -400,34 +464,34 @@ ul{list-style:none}
   </div>
   <div class="svc-grid">
     <div class="svc-card" data-reveal>
-      <img class="svc-img" src="https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=700&h=380&dpr=1" alt="Kitchen Remodel" loading="lazy">
+      <img class="svc-img" src="actual-photos/project-photos/kitchen-remodel-dining.png" alt="Kitchen Remodel" loading="lazy">
       <div class="svc-body">
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
         <h3 class="svc-title">Kitchen Remodels</h3>
-        <p class="svc-text">Full kitchen transformations — cabinets, countertops, layout changes, plumbing, and electrical — managed from design to the final grout line.</p>
+        <p class="svc-text">Full kitchen transformations (cabinets, countertops, layout changes, plumbing, and electrical) managed from design to the final grout line.</p>
       </div>
       <div class="svc-bar"></div>
     </div>
     <div class="svc-card" data-reveal data-reveal-delay="1">
-      <img class="svc-img" src="https://images.pexels.com/photos/1454805/pexels-photo-1454805.jpeg?auto=compress&cs=tinysrgb&w=700&h=380&dpr=1" alt="Bathroom Renovation" loading="lazy">
+      <img class="svc-img" src="actual-photos/project-photos/bathroom-marble-remodel.png" alt="Bathroom Renovation" loading="lazy">
       <div class="svc-body">
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
         <h3 class="svc-title">Bathroom Renovations</h3>
-        <p class="svc-text">Primary baths, guest baths, and powder rooms — tile, fixtures, vanities, and layouts — managed with a single point of contact and zero contractor juggling.</p>
+        <p class="svc-text">Primary baths, guest baths, and powder rooms (tile, fixtures, vanities, and layouts) managed with a single point of contact and zero contractor juggling.</p>
       </div>
       <div class="svc-bar"></div>
     </div>
     <div class="svc-card" data-reveal data-reveal-delay="2">
-      <img class="svc-img" src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=700&h=380&dpr=1" alt="Home Addition" loading="lazy">
+      <img class="svc-img" src="actual-photos/project-photos/exterior-addition-in-progress.png" alt="Home Addition" loading="lazy">
       <div class="svc-body">
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         <h3 class="svc-title">Home Additions</h3>
-        <p class="svc-text">Need more space? We manage the design coordination, structural work, permitting, and all trades — delivering a seamless addition on time and on budget.</p>
+        <p class="svc-text">Need more space? We manage the design coordination, structural work, permitting, and all trades, delivering a seamless addition on time and on budget.</p>
       </div>
       <div class="svc-bar"></div>
     </div>
     <div class="svc-card" data-reveal>
-      <img class="svc-img" src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=700&h=380&dpr=1" alt="Full Home Remodel" loading="lazy">
+      <img class="svc-img" src="actual-photos/project-photos/living-kitchen-balcony.png" alt="Full Home Remodel" loading="lazy">
       <div class="svc-body">
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <h3 class="svc-title">Full-Home Remodels</h3>
@@ -436,16 +500,16 @@ ul{list-style:none}
       <div class="svc-bar"></div>
     </div>
     <div class="svc-card" data-reveal data-reveal-delay="1">
-      <img class="svc-img" src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=700&h=380&dpr=1" alt="Basement Finishing" loading="lazy">
+      <img class="svc-img" src="actual-photos/project-photos/living-room-leather.png" alt="Basement Finishing" loading="lazy">
       <div class="svc-body">
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
         <h3 class="svc-title">Basement Finishing</h3>
-        <p class="svc-text">Turn unused space into livable square footage — media rooms, wet bars, home gyms, or guest suites. We handle every trade from framing to final coat.</p>
+        <p class="svc-text">Turn unused space into livable square footage: media rooms, wet bars, home gyms, or guest suites. We handle every trade from framing to final coat.</p>
       </div>
       <div class="svc-bar"></div>
     </div>
     <div class="svc-card" data-reveal data-reveal-delay="2">
-      <img class="svc-img" src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=700&h=380&dpr=1" alt="Master Suite" loading="lazy">
+      <img class="svc-img" src="actual-photos/project-photos/screened-porch-addition.png" alt="Master Suite" loading="lazy">
       <div class="svc-body">
         <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/><line x1="16" y1="11" x2="22" y2="11"/><line x1="19" y1="8" x2="19" y2="14"/></svg>
         <h3 class="svc-title">Master Suite Additions</h3>
@@ -459,7 +523,7 @@ ul{list-style:none}
 <!-- ABOUT SPLIT -->
 <section class="about">
   <div class="about-photo">
-    <img src="https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=900&h=1100&dpr=1" alt="Beautifully remodeled interior" loading="lazy">
+    <img src="actual-photos/project-photos/exterior-addition-finished.png" alt="Beautifully remodeled interior" loading="lazy">
     <div class="about-badge">
       <div class="about-badge-num">12+</div>
       <div class="about-badge-text">Years in the<br>Twin Cities</div>
@@ -467,15 +531,15 @@ ul{list-style:none}
   </div>
   <div class="about-content">
     <h2 class="about-headline" data-reveal>We work for you, <em>not the contractor.</em></h2>
-    <p class="about-body" data-reveal data-reveal-delay="1">Most homeowners go into a remodel blind — relying on contractors who have competing interests. Watchman sits on your side of the table, protecting your investment and keeping everyone accountable from day one.</p>
+    <p class="about-body" data-reveal data-reveal-delay="1">Most homeowners go into a remodel blind, relying on contractors who have competing interests. Watchman sits on your side of the table, protecting your investment and keeping everyone accountable from day one.</p>
     <div class="about-list">
       <div class="about-item" data-reveal data-reveal-delay="1">
         <svg class="about-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9,12 11,14 15,10"/></svg>
-        <div><span class="about-item-strong">100% Transparent Pricing</span><span class="about-item-text">Open-book contracts — you see every invoice, every line item, every markup.</span></div>
+        <div><span class="about-item-strong">100% Transparent Pricing</span><span class="about-item-text">Open-book contracts: you see every invoice, every line item, every markup.</span></div>
       </div>
       <div class="about-item" data-reveal data-reveal-delay="2">
         <svg class="about-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9,12 11,14 15,10"/></svg>
-        <div><span class="about-item-strong">Dedicated Project Manager</span><span class="about-item-text">One point of contact who knows your project inside and out — no call centers, no handoffs.</span></div>
+        <div><span class="about-item-strong">Dedicated Project Manager</span><span class="about-item-text">One point of contact who knows your project inside and out: no call centers, no handoffs.</span></div>
       </div>
       <div class="about-item" data-reveal data-reveal-delay="3">
         <svg class="about-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="9,12 11,14 15,10"/></svg>
@@ -504,19 +568,19 @@ ul{list-style:none}
 <section class="process" id="process">
   <div class="process-header">
     <h2 class="process-headline" data-reveal>Four steps to a <em>remodel you can trust</em></h2>
-    <p class="process-sub" data-reveal data-reveal-delay="1">A clear process with no guesswork — from your first call to the day you move back in.</p>
+    <p class="process-sub" data-reveal data-reveal-delay="1">A clear process with no guesswork, from your first call to the day you move back in.</p>
   </div>
   <div class="process-grid">
     <div class="process-card" data-reveal>
-      <img class="process-card-img" src="https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=600&h=320&dpr=1" alt="Discovery" loading="lazy">
+      <img class="process-card-img" src="actual-photos/process/step-1-discovery-call.jpg" alt="Discovery Call" loading="lazy">
       <div class="process-card-body">
         <div class="process-step">01</div>
         <h3 class="process-title">Discovery Call</h3>
-        <p class="process-text">We start by understanding your vision, goals, and budget. No pressure — just an honest conversation about what's possible and what it'll take.</p>
+        <p class="process-text">We start by understanding your vision, goals, and budget. No pressure, just an honest conversation about what's possible and what it'll take.</p>
       </div>
     </div>
     <div class="process-card" data-reveal data-reveal-delay="1">
-      <img class="process-card-img" src="https://images.pexels.com/photos/1181715/pexels-photo-1181715.jpeg?auto=compress&cs=tinysrgb&w=600&h=320&dpr=1" alt="Planning" loading="lazy">
+      <img class="process-card-img" src="actual-photos/process/step-2-plan-budget.jpg" alt="Plan and Budget" loading="lazy">
       <div class="process-card-body">
         <div class="process-step">02</div>
         <h3 class="process-title">Plan & Budget</h3>
@@ -524,19 +588,19 @@ ul{list-style:none}
       </div>
     </div>
     <div class="process-card" data-reveal data-reveal-delay="2">
-      <img class="process-card-img" src="https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=600&h=320&dpr=1" alt="Build" loading="lazy">
+      <img class="process-card-img" src="actual-photos/process/step-3-build-manage.jpg" alt="Build and Manage" loading="lazy">
       <div class="process-card-body">
         <div class="process-step">03</div>
         <h3 class="process-title">Build & Manage</h3>
-        <p class="process-text">We run daily site oversight, coordinate all trades, handle permits, and send you weekly updates — so you're always informed without being overwhelmed.</p>
+        <p class="process-text">We run daily site oversight, coordinate all trades, handle permits, and send you weekly updates, so you're always informed without being overwhelmed.</p>
       </div>
     </div>
     <div class="process-card" data-reveal data-reveal-delay="3">
-      <img class="process-card-img" src="https://images.pexels.com/photos/1029611/pexels-photo-1029611.jpeg?auto=compress&cs=tinysrgb&w=600&h=320&dpr=1" alt="Handover" loading="lazy">
+      <img class="process-card-img" src="actual-photos/process/step-4-final-walkthrough.jpg" alt="Final Walkthrough" loading="lazy">
       <div class="process-card-body">
         <div class="process-step">04</div>
         <h3 class="process-title">Final Walkthrough</h3>
-        <p class="process-text">We do a detailed punch-list inspection, make sure every detail meets your expectations, and hand over your finished space — ready to enjoy.</p>
+        <p class="process-text">We do a detailed punch-list inspection, make sure every detail meets your expectations, and hand over your finished space, ready to enjoy.</p>
       </div>
     </div>
   </div>
@@ -554,23 +618,23 @@ ul{list-style:none}
   </div>
   <div class="portfolio-grid">
     <div class="portfolio-item" data-reveal>
-      <img class="p-img" src="https://images.pexels.com/photos/3935333/pexels-photo-3935333.jpeg?auto=compress&cs=tinysrgb&w=1200&h=700&dpr=1" alt="Kitchen Remodel Edina" loading="lazy">
+      <img class="p-img" src="actual-photos/project-photos/kitchen-remodel-lanterns.jpeg" alt="Kitchen Remodel Edina" loading="lazy">
       <div class="p-overlay"><div><div class="p-cat">Kitchen Remodel · Edina, MN</div><div class="p-name">Sherwood Lane Kitchen Renovation</div></div></div>
     </div>
     <div class="portfolio-item" data-reveal data-reveal-delay="1">
-      <img class="p-img" src="https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&dpr=1" alt="Living Room" loading="lazy">
+      <img class="p-img" src="actual-photos/project-photos/living-room-leather.png" alt="Living Room" loading="lazy">
       <div class="p-overlay"><div><div class="p-cat">Full Remodel · Minneapolis, MN</div><div class="p-name">Lake Harriet Full-Home Renovation</div></div></div>
     </div>
     <div class="portfolio-item" data-reveal data-reveal-delay="2">
-      <img class="p-img" src="https://images.pexels.com/photos/1454805/pexels-photo-1454805.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&dpr=1" alt="Bathroom Remodel" loading="lazy">
+      <img class="p-img" src="actual-photos/project-photos/bathroom-marble-remodel.png" alt="Bathroom Remodel" loading="lazy">
       <div class="p-overlay"><div><div class="p-cat">Primary Bath · Wayzata, MN</div><div class="p-name">Wayzata Primary Bath Remodel</div></div></div>
     </div>
     <div class="portfolio-item" data-reveal>
-      <img class="p-img" src="https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&dpr=1" alt="Home Addition" loading="lazy">
+      <img class="p-img" src="actual-photos/project-photos/exterior-addition-in-progress.png" alt="Home Addition" loading="lazy">
       <div class="p-overlay"><div><div class="p-cat">Addition · Stillwater, MN</div><div class="p-name">Stillwater Master Suite Addition</div></div></div>
     </div>
     <div class="portfolio-item" data-reveal data-reveal-delay="1">
-      <img class="p-img" src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=700&h=500&dpr=1" alt="Interior" loading="lazy">
+      <img class="p-img" src="actual-photos/project-photos/kitchen-remodel-white.png" alt="Interior" loading="lazy">
       <div class="p-overlay"><div><div class="p-cat">Full Remodel · Eagan, MN</div><div class="p-name">Eagan Whole-Home Renovation</div></div></div>
     </div>
   </div>
@@ -591,16 +655,16 @@ ul{list-style:none}
 <!-- TESTIMONIAL -->
 <section class="testimonial">
   <div class="test-photo">
-    <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=900&h=800&dpr=1" alt="Renovated living space" loading="lazy">
+    <img src="actual-photos/project-photos/living-kitchen-balcony.png" alt="Renovated living space" loading="lazy">
   </div>
   <div class="test-content">
     <div class="test-mark">&ldquo;</div>
-    <blockquote class="test-quote" data-reveal>Watchman took all the stress out of our kitchen remodel. We knew exactly where our money was going every single week, and the project came in on time and on budget. I'd never remodel without them again.</blockquote>
+    <blockquote class="test-quote" data-reveal>James has been great to work with! He's kept the project in our budget and has been more collaborative than other contractors.</blockquote>
     <div class="test-author" data-reveal data-reveal-delay="1">
-      <img class="test-avatar" src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=1" alt="Sarah M." loading="lazy">
-      <div><div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="test-name">Sarah M.</div><div class="test-role">Homeowner, Edina MN — Kitchen & Bath Remodel</div></div>
+      <div class="test-avatar" aria-hidden="true">K</div>
+      <div><div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="test-name">Kellie</div><div class="test-role">Homeowner, Shorewood, MN</div></div>
     </div>
-    <div class="test-dots" data-reveal data-reveal-delay="2"><div class="t-dot active"></div><div class="t-dot"></div><div class="t-dot"></div></div>
+    
   </div>
 </section>
 
@@ -617,7 +681,7 @@ ul{list-style:none}
   <div class="contact-inner">
     <div>
       <h2 class="contact-headline" data-reveal>Let's talk about <em>your remodel.</em></h2>
-      <p class="contact-body" data-reveal data-reveal-delay="1">Whether you're still in the planning phase or ready to demo, we'd love to hear about your project. Free initial consultations — no commitment required.</p>
+      <p class="contact-body" data-reveal data-reveal-delay="1">Whether you're still in the planning phase or ready to demo, we'd love to hear about your project. Free initial consultations: no commitment required.</p>
       <div class="contact-info">
         <div class="contact-item" data-reveal data-reveal-delay="1">
           <div class="contact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.22 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div>
@@ -695,7 +759,7 @@ ul{list-style:none}
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-copy">&copy; 2025 Watchman Construction Management. All rights reserved.</div>
+      <div class="footer-copy">&copy; 2026 Watchman Construction Management. All rights reserved.</div>
       <div class="footer-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Sitemap</a></div>
     </div>
   </div>
